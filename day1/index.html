@@ -5,40 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    
-
-    <!-- <div class="elem" id="elm">
-        <h1>Night</h1>
+<body
+    class="bg-[url(https://img.freepik.com/free-vector/matrix-style-binary-code-digital-background-with-falling-numbers_1017-25336.jpg?ga=GA1.1.1237231128.1741731549&semt=ais_hybrid)] ">
+    <div id="welcome" class="flex justify-center align-contents-center bg-white/[50%] m-[90px] p-[40px] rounded-[40px]">
+        <h1 class="flex self-center w-fit font-bold text-[40px] ">Welcome to the matrix</h1>
     </div>
-    <div class="elem"><h2>Class...</h2></div>
-    <div class="elem"><h3>mind</h3></div>
-    <div id="elm2"><h4>dey</h4></div>
 
+    <div id="form" class="bg-white rounded-40px mx-[90px] my-[40px] rounded-[40px]">
+        <div id="formItms" class="flex flex-col gap-6 justify-center align-contents-center p-[40px]">
+            <p id="fnError" class=" hidden text-red-300">This field is Required!!!</p>
+            <input id="firstName" class="border-2 border-green-700 px-[16px] py-[20px] rounded-[20px] w-full
+            " type="text" name="first name" id="" placeholder="Type your First name!" onkeydown="clearErr('#fnError')">
+            <p id="lnError" class="hidden text-red-300">This field is Required!!!</p>
+            <input id="lastName" class="border-2 border-green-700 px-[16px] py-[20px] rounded-[20px] w-full
+            " type="text" name="last name" id="" placeholder="Type your Last name!">
+            <p id="eError" class=" hidden text-red-300">This field is Required!!!</p>
+            <input id="email" class="border-2 border-green-700 px-[16px] py-[20px] rounded-[20px] w-full
+            " type="email" name="email" id="" placeholder="Enter your email address!">
+            <p id="aError" class=" hidden text-red-300">This field is Required!!!</p>
+            <input id="address" class="border-2 border-green-700 px-[16px] py-[20px] rounded-[20px] w-full
+            " type="text" name="address" id="" placeholder="Enter your Address!">
+            <p id="agError" class=" hidden text-red-300">This field is Required!!!</p>
+            <input id="age" class="border-2 border-green-700 px-[16px] py-[20px] rounded-[20px] w-full
+            " type="text" name="Age" id="" placeholder="Enter your age">
+
+            <button type="submit" id="submit"
+                class="bg-blue-500 border-2 border-blue-700 px-[16px] py-[20px] rounded-[20px] w-full">
+                Blue Pill
+            </button>
+
+
+        </div>
+
+    </div>
     <script>
-        document.getElementsByTagName('div')
-        document.getElementsByClassName('elem')
-        document.getElementById('elm')
-        document.getElementById('elm2')
-        /*
-        // document.getElementById("content").innerText= "night classes are fun, see you next tomorrow";
-        // document.querySelector("h1").innerText= "OMOx10000";
 
-        // document.querySelector("h1").style.backgroundColor = "red";
-        // document.querySelector("h1").style.color = "green";
-        
+        let btn = document.getElementById("submit")
+        let firstName = document.getElementById("firstName")
+        let lastName = document.getElementById("lastName")
+        let email = document.getElementById("email")
+        let address = document.getElementById("address")
+        let age = document.getElementById("age")
 
-        // let greet = ["hello", "Night classes are fun", "see you next tomorrow"]
-        // function greeting() {
-        //     for (i of greet) {
-        //         return i
-        //     }
-        // }
-        // document.querySelector('h1').textContent = greeting()
-        */
-    </script> -->
+        function clearErr(selector) {
+            document.querySelector(selector).style.display = "none";
+        }
+
+        btn.addEventListener('click', ((e) => {
+            e.preventDefault()
+
+            if (firstName.value == "") {
+                let error = document.getElementById("fnError").style.display = "block"
+            }
+            if (lastName.value == "") {
+                let error = document.getElementById("lnError").style.display = "block"
+            }
+            if (email.value == "") {
+                let error = document.getElementById("eError").style.display = "block"
+            }
+            if (address.value == "") {
+                let error = document.getElementById("aError").style.display = "block"
+            }
+            if (age.value == "") {
+                let error = document.getElementById("agError").style.display = "block"
+            }
+        }))
+    </script>
 </body>
 
 </html>
