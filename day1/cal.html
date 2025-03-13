@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-blue-900 md:mx-[200px] lg:mx-[300px]">
+    <div class="bg-[#111111] h-fit mx-[4px] my-[8px] rounded-xl sm:mx-[16px] sm:my-[16px] md:mx-[50px] md:my-[50px] lg:mx-[100px] lg:my-[90px] overflow-hidden text-white">
+        <form action="" class="flex flex-col bg-black p-[20px] gap-4 border-b border-blue-900">
+            <input type="number" name="int1" id="int1" class="bg-black border border-white rounded-md text-[40px] text-end px-[10px] hover:border-blue-300" placeholder="0">
+            <input id="int2" type="number" class="bg-black border border-white rounded-md text-[40px] text-end px-[10px] hover:border-blue-300" placeholder="0">
+
+            <h1 id="eval" class="px-[10px] font-bold text-[40px] text-end ">
+                0
+            </h1>
+        </form>
+        <div class="grid gap-3 m-4 md:grid-cols-4">
+            <button type="submit" id="add" class="bg-black border border-blue-700 mx-8 md:mx-1 py-3 rounded-md hover:border-blue-300">Add</button>
+            <button type="submit" id="sub" class="bg-black border border-blue-700 mx-8 md:mx-1 py-3  rounded-md hover:border-blue-300">Substract</button>
+            <button type="submit" id="mul" class="bg-black border border-blue-700 mx-8 md:mx-1 py-3 rounded-md hover:border-blue-300">Multiply</button>
+            <button type="submit" id="div" class="bg-black border border-blue-700 mx-8 md:mx-1 py-3 rounded-md hover:border-blue-300">Divide</button>
+        </div>
+    </div>
+
+    <script src="/day1/calcul.js"></script>
+</body>
+
+</html>

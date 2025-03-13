@@ -16,6 +16,5 @@ btn.addEventListener('click'(()=>{
     alert(error)
 
     // firstName.appendChild(before, error)
-
  }
 }))
